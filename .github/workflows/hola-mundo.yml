@@ -11,5 +11,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12' 
-      - run: python hello_git_actions.py
+      - name: Running hello_git_actions.py file 
+        run: python hello_git_actions.py
         
