@@ -1,0 +1,31 @@
+name: Triggers
+run-name: Experimentando con triggers
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '0/5 * * * *'
+
+jobs:
+    On_push:
+      runs-on: ubuntu-latest
+      steps:
+        - name: cli cmd
+          run: echo "Hello Push"
+    On_pull_request:
+      runs-on: macos-latest
+      steps:
+       - name: cli cmd
+         run: echo "Hello Pull Request"
+    On_schedule:
+      runs-on: windows-latest
+      steps:
+       - name: cli psh
+         run: echo "Hello Pull Request"
+
+     
+     
