@@ -1,0 +1,14 @@
+name: hola-mundo
+on: [push]
+jobs:
+  hola-mundo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check-out repository
+        uses:  actions/checkout@v4
+      - name: set up puthon
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12' 
+      - run: python ../hello_git_actions.py
+        
